@@ -1,0 +1,8 @@
+{
+    "name": "gjdbrink/bittrex-api",
+    "description": "Wrapper for the Bittrex API",
+    "type": "project",
+    "require": {
+        "guzzlehttp/guzzle": "~6.0"
+    }
+}
