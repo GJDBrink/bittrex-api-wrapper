@@ -41,8 +41,8 @@ spl_autoload_register(function ($class) {
 
 class ApiClient
 {
-    private $apiKey = 'd89923574d854210ab1e68f9df16ef8a';
-    private $apiSecret = '0fb33cb37f0441cfb570c65f6fc406ea';
+    private $apiKey = '55350442b64e4998989c1ebaa8744991';
+    private $apiSecret = '8a2bdcf2070f4664b954ef10a91fec7c';
     private $baseUri = 'https://bittrex.com/api/v1.1';
 
     public function call($endpoint, $parameters = array()){
@@ -68,11 +68,10 @@ class ApiClient
         curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_VERBOSE, true);
 
         $execResult = curl_exec($ch);
         $obj = json_decode($execResult);
-
-        //var_dump($obj);
 
         return $obj;
 

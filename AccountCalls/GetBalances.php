@@ -14,7 +14,7 @@ use BittrexApi\Balance;
 class GetBalances extends AccountCall
 {
 
-    public $endpoint = 'public/getmarkethistory';
+    public $endpoint = 'account/getbalances';
 
     /** @var ApiClient */
     private $client;

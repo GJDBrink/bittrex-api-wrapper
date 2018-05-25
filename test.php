@@ -17,6 +17,9 @@ use BittrexApi\PublicCalls\GetTicker;
 use BittrexApi\PublicCalls\GetMarketSummaries;
 use BittrexApi\PublicCalls\GetMarketHistory;
 use BittrexApi\AccountCalls\GetBalances;
+use BittrexApi\AccountCalls\GetBalance;
+use BittrexApi\AccountCalls\GetDepositAddress;
+use BittrexApi\AccountCalls\GetDepositHistory;
 
 $client = new ApiClient();
 
@@ -28,6 +31,10 @@ $client = new ApiClient();
 
 //$call = new GetMarketSummaries($client);
 
-$call = new GetBalances($client);
+//$call = new GetDepositAddress($client, 'ETH');
 
-$call->execute();
+$call = new GetDepositHistory($client, 'LTC');
+
+echo '<pre>';
+print_r($call->execute());
+echo '</pre>';
