@@ -34,9 +34,7 @@ class GetMarketSummaries extends PublicCall
             }
         }
 
-        echo '<pre>';
-        var_dump($this->markets[0]);
-        echo '</pre>';
+        return $this->markets;
     }
 
     public function cast($sourceObject)

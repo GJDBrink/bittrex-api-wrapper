@@ -39,9 +39,7 @@ class GetMarketHistory extends PublicCall
             }
         }
 
-        echo '<pre>';
-        var_dump($this->trades);
-        echo '</pre>';
+        return $this->trades;
     }
 
     public function cast($sourceObject)

@@ -35,9 +35,7 @@ class GetBalances extends AccountCall
             }
         }
 
-        echo '<pre>';
-        var_dump($this->balances);
-        echo '</pre>';
+        return $this->balances;
     }
 
     public function cast($sourceObject)

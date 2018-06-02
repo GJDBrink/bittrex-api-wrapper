@@ -31,9 +31,7 @@ class GetCurrencies extends PublicCall
             }
         }
 
-        echo '<pre>';
-        var_dump($this->currencies[0]);
-        echo '</pre>';
+        return $this->currencies;
     }
 
     public function cast($sourceObject)

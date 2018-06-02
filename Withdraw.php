@@ -2,11 +2,14 @@
 /**
  * Created by PhpStorm.
  * User: Gerhard
- * Date: 1/9/2018
- * Time: 9:46 PM
+ * Date: 02-Jun-18
+ * Time: 22:57
  */
+
+namespace BittrexApi;
 
 class Withdraw
 {
+    public $uuid;
 
 }

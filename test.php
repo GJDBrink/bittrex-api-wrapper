@@ -20,6 +20,9 @@ use BittrexApi\AccountCalls\GetBalances;
 use BittrexApi\AccountCalls\GetBalance;
 use BittrexApi\AccountCalls\GetDepositAddress;
 use BittrexApi\AccountCalls\GetDepositHistory;
+use BittrexApi\AccountCalls\GetOrderHistory;
+use BittrexApi\AccountCalls\GetWithdrawalHistory;
+use BittrexApi\AccountCalls\DoWithdraw;
 
 $client = new ApiClient();
 
@@ -33,7 +36,9 @@ $client = new ApiClient();
 
 //$call = new GetDepositAddress($client, 'ETH');
 
-$call = new GetDepositHistory($client, 'LTC');
+//$call = new GetOrderHistory($client, 'BTC-VTC');
+//$call = new GetWithdrawalHistory($client, 'BTC');
+$call = new DoWithdraw($client, 'BTC', '1', '125Kh5VSnzV873yPpFnFpxyxbJ2RpUkgQX', '');
 
 echo '<pre>';
 print_r($call->execute());
