@@ -34,11 +34,19 @@ $client = new ApiClient();
 
 //$call = new GetMarketSummaries($client);
 
-//$call = new GetDepositAddress($client, 'ETH');
+$call = new GetDepositAddress($client, 'ETH');
 
 //$call = new GetOrderHistory($client, 'BTC-VTC');
 //$call = new GetWithdrawalHistory($client, 'BTC');
-$call = new DoWithdraw($client, 'BTC', '1', '125Kh5VSnzV873yPpFnFpxyxbJ2RpUkgQX', '');
+//$call = new DoWithdraw($client, 'BTC', '1', '125Kh5VSnzV873yPpFnFpxyxbJ2RpUkgQX', '');
+
+//$call = new \BittrexApi\MarketCalls\GetOpenOrders($client);
+
+//$call = new \BittrexApi\MarketCalls\PostSellLimit($client, 'BTC-LTC', 25, 0.1);
+
+//$call = new \BittrexApi\MarketCalls\PostCancel($client,'sdfdsfdsfsdfdsfdsf');
+
+//$call = new \BittrexApi\PublicCalls\GetOrderBook($client, 'BTC-LTC', 'both');
 
 echo '<pre>';
 print_r($call->execute());
